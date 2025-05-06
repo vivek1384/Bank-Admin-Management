@@ -1,0 +1,109 @@
+<header>
+    <p routerLink="/home">Home</p>
+    <p routerLink="/user">Users</p>
+    <!-- <p routerLink="/user">Recent Transaction</p> -->
+    <p routerLink="/transaction">Transaction</p>
+    <p routerLink="/loan">Loan</p>
+    <p routerLink="/approved-loan">Approved Loans</p>
+    <p (click)="logout()">Log Out</p>
+</header>
+<hr>
+
+<div class="container">
+    <div class="left">
+        <div class="input">
+            <input type="text" placeholder="Enter Account Number" [(ngModel)]="accNO">
+            <button (click)="onChange()">Next</button>
+        </div>
+        <hr>
+        <div class="loans">
+            @if(isTrue){
+            <div class="cards">
+                @for (item of loanList; track $index) {
+
+                <div class="card">
+                    <h2>Loan Name : <span>{{item.name}}</span></h2>
+                    <p>Rate of Interest : <span><strong>{{item.rofi}}%</strong></span></p>
+                    <p>Loan Amount : <span><strong>Up to ₹{{item.ammount}}</strong></span></p>
+                    <p>Repayment : <span><strong>{{item.repayment}} to {{item.repayment2}} months</strong></span></p>
+                    <p>Processing fees : <span><strong>{{item.fees}}</strong></span></p>
+                    <div class="butons">
+                        <button (click)="proceed(item)">Proceed</button>
+                        <button (click)="edit(item)">Edit</button>
+                        <button (click)="deleteLoan(item.id )">Delete</button>
+                    </div>
+                </div>
+                }
+
+            </div>
+            } @else {
+            <form action="">
+                <input type="text" placeholder="Enter Name" name="accNo" [(ngModel)]="approved.accNo" disabled="">
+                <input type="text" placeholder="Enter Name" name="name" [(ngModel)]="approved.name" disabled="">
+                <input type="text" placeholder="Enter Mobile Number" name="mono" [(ngModel)]="approved.mono" disabled="">
+                <input type="text" placeholder="Enter Email" name="mail" [(ngModel)]="approved.mail" disabled="">
+                <select id="" name="loan" [(ngModel)]="approved.loan">
+                    <option value="" selected disabled hidden>--Select Loan Type--</option>
+                    @for (item of loanList; track $index) {
+                        <option value={{item.name}}>{{item.name}}</option>
+                    }
+                    
+                </select>
+                <input type="text" placeholder="Enter Rate of Interest" name="rofi" [(ngModel)]="approved.rofi" disabled="">
+                <div class="action">
+                    <input type="text" placeholder="Enter Credit Score (300 to 900)" name="cScore" [(ngModel)]="approved.cScore" (keyup)="onCredit()">
+                    <button (click)="check(approved.cScore)">Check Credit Score</button>
+                </div>
+                <div class="action2">
+                    <label for="">Loan Amount : </label>
+                    <input type="text" placeholder="Enter Amount" name="amount" [(ngModel)]="approved.amount" disabled>
+                </div>
+                <div class="action2">
+                    <label for="">Repayment Time :</label>
+                    <input type="text" placeholder="Enter Repayment Time" name="repayment" [(ngModel)]="approved.repayment" disabled>
+                </div>
+                <div class="action2">
+                    <label for="">Monthly EMI : </label>
+                    <input type="text" placeholder="Enter Monthly EMI" name="monthly" [(ngModel)]="approved.monthly" disabled>
+                </div>
+                <button (click)="submit(approved)">Submit</button>
+
+            </form>
+            }
+        </div>
+    </div>
+    <hr>
+    <div class="right">
+        @if(isShow){
+        <div class="info">
+            <h1>User Info:</h1>
+            <h4> Title : <span>{{user.title}}</span></h4>
+            <h4> First name : <span>{{user.fName}}</span></h4>
+            <h4> Middle Name : <span> {{user.mName}} </span></h4>
+            <h4> Last Name : <span>{{user.lName}}</span></h4>
+            <h4> Account Number : <span>{{user.accNo}}</span></h4>
+            <h4> Adress Line 1 : <span>{{user.aLine1}}</span></h4>
+            <h4> Adress Line 2 : <span>{{user.aLine2}}</span></h4>
+            <h4> Phone Number : <span>{{user.phNumber}}</span></h4>
+            <h4> Amount : <span>₹{{user.amount}}</span></h4>
+            <h4> Email : <span>{{user.mail}}</span></h4>
+        </div>
+        }@else {
+        <form action="">
+            <input type="text" placeholder="Enter Loan Name" name="name" [(ngModel)]="loan.name">
+            <input type="text" placeholder="Enter rate of Interest" name="rofi" [(ngModel)]="loan.rofi">
+            <input type="text" placeholder="Enter Amount" name="ammount" [(ngModel)]="loan.ammount">
+            <input type="text" placeholder="Enter Minimum Repayment Time" name="repayment" [(ngModel)]="loan.repayment">
+            <input type="text" placeholder="Enter Maximum Repayment Time" name="repayment2" [(ngModel)]="loan.repayment2">
+            <input type="text" placeholder="Enter Fees" name="fees" [(ngModel)]="loan.fees">
+            @if(isEdit){
+            <button (click)="updateLoan(loan)">Update Loan</button>
+            }@else {
+            <button (click)="addLoan(loan)">Add Loan</button>
+            }
+        </form>
+        }
+
+    </div>
+
+</div>

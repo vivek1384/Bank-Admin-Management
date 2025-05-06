@@ -1,0 +1,52 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    background: rgb(152, 127, 96);
+    color: rgb(244, 237, 237);
+}
+
+.container h1{
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.container form{
+    padding: 1rem;
+    border: 2px solid rgb(244, 237, 237);
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin: auto;
+    margin-top: 1.5rem;
+}
+
+.container input{
+    background: transparent;
+    outline: none;
+    border: none;
+    font-size: 19px;
+    border-bottom: 2px solid rgb(244, 237, 237);
+    padding: 5px;
+    padding-left: 15px;
+    color: rgb(244, 237, 237);
+}
+input::placeholder{
+    color: rgb(244, 237, 237);
+    opacity: 0.7;
+}
+
+button{
+    background: transparent;
+    font-size: 20px;
+    padding: 6px;
+    border: none;
+    border: 2px solid rgb(244, 237, 237);
+    color: rgb(244, 237, 237);
+    cursor: pointer;
+}
+
+button:hover{
+    background: rgb(244, 237, 237);
+    color: rgb(152, 127, 96);
+}

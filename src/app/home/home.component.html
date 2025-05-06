@@ -1,0 +1,102 @@
+<header>
+    <p>Home</p>
+    <p routerLink="/user">Users</p>
+    <!-- <p routerLink="/user">Recent Transaction</p> -->
+    <p routerLink="/transaction">Transaction</p>
+    <p routerLink="/loan">Loan</p>
+    <p routerLink="/approved-loan">Approved Loans</p>
+    <p (click)="logout()">Log Out</p>
+</header>
+<hr>
+<div class="container">
+    <div class="left">
+        <div class="top">
+            <form action="">
+                <h1>Deposite</h1>
+                <input type="text" placeholder="Enter Amount" autocomplete="off" [(ngModel)]="entry.amount" name="amount">
+                <input type="text" placeholder="Enter Acc. No." autocomplete="off" [(ngModel)]="entry.accNo" name="accNo">
+                <button (click)="deposite(entry)">Deposite</button>
+            </form>
+        </div>
+        <hr>
+        <div class="bottom">
+            <form action="">
+                <h1>Withdrawal</h1>
+                <div class="action"></div>
+                <input type="text" placeholder="Enter Amount" autocomplete="off" [(ngModel)]="entry2.amount" name="amount">
+                <input type="text" placeholder="Enter Acc. No." autocomplete="off" [(ngModel)]="entry2.accNo" name="accNo">
+                <button (click)="withdrawal(entry2)">Withdrawal</button>
+            </form>
+        </div>
+    </div>
+    <hr>
+    <div class="middle">
+        <div class="top">
+            <form action="">
+                <h1>EMI Repayment</h1>
+                <div class="action">
+                    <input type="text" placeholder="Enter Acc. No." autocomplete="off" [(ngModel)]="accNO" name="accNO">
+                    <button (click)="check()">Check</button>
+                </div>
+                <div class="action2">
+                    @for (item of loanList; track $index) {
+                        <button (click)="onLoan(item)">{{item.loan}}</button>
+                    }
+                </div>
+                <input type="text" placeholder="Enter Amount" autocomplete="off" [(ngModel)]="emi.amount" name="amount" disabled="">
+                <input type="text" placeholder="Remaining EMIs" autocomplete="off" [(ngModel)]="remainingEMI" name="remainingEMI" disabled="">
+                <input type="text" placeholder="Total EMI Done" autocomplete="off" [(ngModel)]="emi.loan.totalEmidone" name="totalEmidone" disabled="">
+                <input type="text" placeholder="Enter EMI number" autocomplete="off" [(ngModel)]="emi.EMInumber" name="EMInumber" disabled="">
+                <button (click)="repayment(emi)">Repayment</button>
+            </form>
+        </div>
+        
+    </div>
+    <hr>
+    <div class="right">
+        <div class="top">
+            <button [ngStyle]="{'background': isUserinfo? 'rgb(255, 255, 255)' : '','color': isUserinfo? 'rgb(152, 127, 96)' : '' }">Add User</button>
+            <button [ngStyle]="{'background': isUserinfo? '' : 'rgb(255, 255, 255)','color': isUserinfo? '' : 'rgb(152, 127, 96)' }">User's Info</button>
+        </div>
+        <hr>
+        <div class="bottom">
+            @if (isUserinfo) {
+            <form action="">
+                <h1>Add User</h1>
+                <select [(ngModel)]="user.title" name="title">
+                    <option value="" selected disabled hidden>--Select Title--</option>
+                    <option value="Mr.">Mr.</option>
+                    <option value="Mrs.">Mrs.</option>
+                    <option value="Miss.">Miss.</option>
+                </select>
+                <input type="text" placeholder="First name" autocomplete="off" [(ngModel)]="user.fName" name="fName">
+                <input type="text" placeholder="Middle name" autocomplete="off" [(ngModel)]="user.mName" name="mName">
+                <input type="text" placeholder="Surname name" autocomplete="off" [(ngModel)]="user.lName" name="lName">
+                <input type="text" placeholder="Adress Line 1" autocomplete="off" [(ngModel)]="user.aLine1"
+                    name="aLine1">
+                <input type="text" placeholder="Adress Line 2" autocomplete="off" [(ngModel)]="user.aLine2"
+                    name="aLine2">
+                <input type="text" placeholder="Mobile Number" autocomplete="off" [(ngModel)]="user.phNumber"
+                    name="phNumber">
+                <input type="text" placeholder="Email" autocomplete="off" [(ngModel)]="user.mail" name="mail">
+                <button (click)="addUser()">Add User</button>
+
+            </form>
+            }@else {
+
+            <h4> Title : <span>{{user.title}}</span></h4>
+            <h4> First name : <span>{{user.fName}}</span></h4>
+            <h4> Middle Name : <span> {{user.mName}} </span></h4>
+            <h4> Last Name : <span>{{user.lName}}</span></h4>
+            <h4> Adress Line 1 : <span>{{user.aLine1}}</span></h4>
+            <h4> Adress Line 2 : <span>{{user.aLine2}}</span></h4>
+            <h4> Phone Number : <span>{{user.phNumber}}</span></h4>
+            <h4> Email : <span>{{user.mail}}</span></h4>
+            <button (click)="confirm()">Confirm</button>
+            <button (click)="back()">Back</button>
+            }
+        </div>
+
+    </div>
+
+</div>

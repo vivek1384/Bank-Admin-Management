@@ -1,0 +1,234 @@
+header{
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    padding: 10px;
+    padding-left: 2rem;
+    background: rgb(152, 127, 96);
+}
+
+header p {
+    color: rgb(244, 237, 237);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+hr{
+    margin: 0;
+    /* border: 1px solid rgb(244, 237, 237); */
+    border: 1px solid rgb(197, 160, 114);
+    box-shadow: 0 0 10px 2px rgb(211, 181, 145);
+
+}
+.container{
+    background: rgb(152, 127, 96);
+    height: calc(100vh - 44px);
+    display: flex;
+    flex-direction: row;
+    color: rgb(244, 237, 237);
+}
+
+.left{
+    width: 60%;
+}
+.left .input{
+    width: 70%;
+    margin: 1rem auto;
+    display: flex;
+}
+
+button{
+    width: 20%;
+    background: transparent;
+    padding: 4px 18px;
+    border: none;
+    color: rgb(244, 237, 237);
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 2px solid rgb(244, 237, 237);
+}
+button:hover{
+    color: rgb(152, 127, 96);
+    background: rgb(244, 237, 237);
+}
+
+input, select{
+    width: 100%;
+    margin: auto;
+    background: transparent;
+    outline: none;
+    border: none;
+    color: rgb(244, 237, 237);
+    font-size: 17px;
+    text-align: center;
+    padding: 5px;
+    padding-left: 15px;
+    border-bottom: 2px solid rgb(244, 237, 237);
+}
+input::placeholder{
+    color: rgb(244, 237, 237);
+    opacity: 0.7;
+}
+
+.loans{
+    width: 95%;
+    /* border: 2px solid rgb(244, 237, 237); */
+    margin: auto;
+    margin-top: 1rem;
+}
+
+.left form{
+    width: 100%;
+}
+
+form{
+    display: flex;
+    width: 80%;
+    margin: 1rem auto;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+form input, select{
+    margin: 10px auto;
+    width: 56%;
+}
+
+
+form select{
+    background: rgb(152, 127, 96);
+    width: 59%;
+}
+
+
+.cards{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 4rem;
+    height: 75vh;
+    overflow-y: scroll;
+}
+
+.card{
+    /* border: 2px solid rgb(244, 237, 237); */
+    padding: 1rem;
+    box-shadow: 0 0 10px 4px rgb(211, 181, 145);
+    border-radius: 8px;
+}
+
+.card h2{
+    font-weight: 500;
+    color: rgb(238, 228, 228);
+    margin: 4px;
+}
+.card h2 span{
+    font-weight: bold;
+    color: rgb(244, 237, 237);
+}
+
+.card p{
+    font-size: 17px;
+    color: rgb(230, 218, 218);
+    margin: 3px;
+    margin-left: 4px;
+}
+
+.card p span {
+    font-size: 18px;
+    font-weight: bold;
+    color: rgb(244, 237, 237);
+}
+
+.card .butons{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.card button{
+    width: auto;
+    font-size: 17px;
+}
+
+.action{
+    width: 59%;
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.action input{
+    width: 60%
+}
+
+.action button{
+    width: 40%;
+    font-size: 15px;
+    margin-top: 7px;
+    padding: 7px;
+}
+
+.action2{
+    display: flex;
+    flex-direction: row;
+    width: 59%;
+    margin: auto;
+}
+
+.action2 label{
+    font-size: 18px;
+    margin-top: 20px;
+    width: 35%;
+}
+
+.action2 input{
+    width: 65%
+}
+
+
+
+.right{
+    width: 40%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 2rem;
+}
+
+.right .info{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    gap: 2rem;
+}
+
+.right .info h4{
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+.right .info h1{
+    text-align: center;
+    color: rgb(230, 218, 218);
+}
+
+.right .info h4 span {
+    font-weight: bold;
+    /* text-decoration: underline; */
+    color: rgb(255, 255, 255);
+}
+
+form button{
+    width: 70%;
+    margin: auto;
+    margin-top: 16px;
+}

@@ -1,0 +1,356 @@
+{
+  "user": [
+    {
+      "id": "9946",
+      "title": "Mr.",
+      "fName": "Akhil",
+      "mName": "P.",
+      "lName": "Hapani",
+      "aLine1": "Limadhra",
+      "aLine2": "Gujarat",
+      "phNumber": "1234567890",
+      "mail": "akhil@gmail.com",
+      "accNo": "695028029",
+      "amount": 1716
+    },
+    {
+      "id": "4ec2",
+      "title": "Mr.",
+      "fName": "Vivek",
+      "mName": "R.",
+      "lName": "Dudhatra",
+      "aLine1": "Surat",
+      "aLine2": "India",
+      "phNumber": "1234567890",
+      "mail": "vivek@gmail.com",
+      "accNo": "6198140533",
+      "amount": 2126
+    },
+    {
+      "id": "08a3",
+      "title": "Mr.",
+      "fName": "Chirag",
+      "mName": "M.",
+      "lName": "Dudhatra",
+      "aLine1": "Surat",
+      "aLine2": "India",
+      "phNumber": "1234567890",
+      "mail": "chirag@gmail.com",
+      "accNo": "9733581317",
+      "amount": 924
+    }
+  ],
+  "admin": [],
+  "entry": [
+    {
+      "id": "0203",
+      "amount": "20000",
+      "accNo": "695028029",
+      "type": "Deposite",
+      "date": "2025-03-11T03:52:51.451Z",
+      "name": "",
+      "loanName": "",
+      "transaction": "success"
+    },
+    {
+      "id": "dd6c",
+      "amount": "20000",
+      "accNo": "6198140533",
+      "type": "Withdrawal",
+      "date": "2025-03-11T03:53:09.250Z",
+      "name": "",
+      "loanName": "",
+      "transaction": "failed"
+    },
+    {
+      "id": "90ea",
+      "amount": "20000",
+      "accNo": "6198140533",
+      "type": "Deposite",
+      "date": "2025-03-11T03:53:09.250Z",
+      "name": "",
+      "loanName": "",
+      "transaction": "success"
+    },
+    {
+      "id": "f871",
+      "amount": 15032,
+      "accNo": "6198140533",
+      "type": "EMI 1",
+      "date": "2025-03-11T03:54:48.895Z",
+      "name": "Vivek Dudhatra",
+      "loanName": "Car Loan",
+      "transaction": "success"
+    },
+    {
+      "id": "a73b",
+      "amount": 13392,
+      "accNo": "695028029",
+      "type": "EMI 1",
+      "date": "2025-03-11T03:55:18.789Z",
+      "name": "Akhil Hapani",
+      "loanName": "Car Loan",
+      "transaction": "success"
+    },
+    {
+      "id": "2024",
+      "amount": "5000",
+      "accNo": "695028029",
+      "type": "Withdrawal",
+      "date": "2025-03-11T03:58:34.807Z",
+      "name": "",
+      "loanName": "",
+      "transaction": "success"
+    },
+    {
+      "id": "6f8f",
+      "amount": "2000",
+      "accNo": "695028029",
+      "type": "Withdrawal",
+      "date": "2025-03-11T03:58:59.305Z",
+      "name": "",
+      "loanName": "",
+      "transaction": "success"
+    },
+    {
+      "id": "10af",
+      "amount": "5000",
+      "accNo": "6198140533",
+      "type": "Withdrawal",
+      "date": "2025-03-11T03:59:23.374Z",
+      "name": "",
+      "loanName": "",
+      "transaction": "success"
+    },
+    {
+      "id": "9bd1",
+      "amount": "5000",
+      "accNo": "9733581317",
+      "type": "Deposite",
+      "date": "2025-03-11T04:09:58.842Z",
+      "name": "",
+      "loanName": "",
+      "transaction": "success"
+    },
+    {
+      "id": "ddd0",
+      "amount": "4576",
+      "accNo": "9733581317",
+      "type": "Withdrawal",
+      "date": "2025-03-11T04:10:18.631Z",
+      "name": "",
+      "loanName": "",
+      "transaction": "success"
+    },
+    {
+      "id": "ee79",
+      "amount": "9424",
+      "accNo": "9733581317",
+      "type": "Deposite",
+      "date": "2025-03-11T04:12:24.572Z",
+      "name": "",
+      "loanName": "",
+      "transaction": "success"
+    },
+    {
+      "id": "8b91",
+      "amount": 9424,
+      "accNo": "9733581317",
+      "type": "EMI 1",
+      "date": "2025-03-11T04:12:51.705Z",
+      "name": "Chirag Dudhatra",
+      "loanName": "Education Loan",
+      "transaction": "success"
+    }
+  ],
+  "loan": [
+    {
+      "id": "8e94",
+      "name": "Home Loan",
+      "rofi": "7",
+      "ammount": "2500000",
+      "repayment": "120",
+      "repayment2": "180",
+      "fees": "As per rule"
+    },
+    {
+      "id": "9f01",
+      "name": "Car Loan",
+      "rofi": "8.5 ",
+      "ammount": "1200000",
+      "repayment": "60",
+      "repayment2": "120",
+      "fees": "As per rule"
+    },
+    {
+      "id": "0490",
+      "name": "Gold Loan",
+      "rofi": "10",
+      "ammount": "1000000",
+      "repayment": "60",
+      "repayment2": "96",
+      "fees": "As per rule"
+    },
+    {
+      "id": "955e",
+      "name": "Personal Loan",
+      "rofi": "12",
+      "ammount": "500000",
+      "repayment": "36",
+      "repayment2": "60",
+      "fees": "As per rule"
+    },
+    {
+      "id": "38c7",
+      "name": "Education Loan",
+      "rofi": "6",
+      "ammount": "500000",
+      "repayment": "36",
+      "repayment2": "60",
+      "fees": "As per rule"
+    },
+    {
+      "id": "3da5",
+      "name": "Buisness Loan",
+      "rofi": "9.5",
+      "ammount": "2000000",
+      "repayment": "120",
+      "repayment2": "180",
+      "fees": "As per rule"
+    }
+  ],
+  "approved": [
+    {
+      "id": "17e2",
+      "name": "Akhil Hapani",
+      "mono": "9876543210",
+      "mail": "akhil@gmail.com",
+      "loan": "Car Loan",
+      "rofi": "8.5 %",
+      "cScore": "785",
+      "amount": 970000,
+      "repayment": 108,
+      "monthly": 13392,
+      "totalEmidone": "1",
+      "accNo": "695028029"
+    },
+    {
+      "id": "6380",
+      "name": "Akhil Hapani",
+      "mono": "9876543210",
+      "mail": "akhil@gmail.com",
+      "loan": "Gold Loan",
+      "rofi": "10%",
+      "cScore": "750",
+      "amount": 750000,
+      "repayment": 87,
+      "monthly": 13728,
+      "totalEmidone": "0",
+      "accNo": "695028029"
+    },
+    {
+      "id": "719e",
+      "name": "Vivek Dudhatra",
+      "mono": "8799323157",
+      "mail": "vivek@gmail.com",
+      "loan": "Home Loan",
+      "rofi": "7%",
+      "cScore": "840",
+      "amount": 2250000,
+      "repayment": 174,
+      "monthly": 18342,
+      "totalEmidone": "0",
+      "accNo": "6198140533"
+    },
+    {
+      "id": "a0da",
+      "name": "Vivek Dudhatra",
+      "mono": "8799323157",
+      "mail": "vivek@gmail.com",
+      "loan": "Car Loan",
+      "rofi": "8.5 %",
+      "cScore": "640",
+      "amount": 680000,
+      "repayment": 94,
+      "monthly": 15032,
+      "totalEmidone": "1",
+      "accNo": "6198140533"
+    },
+    {
+      "id": "e63b",
+      "name": "Chirag Dudhatra",
+      "mono": "9687248426",
+      "mail": "vivek@gmail.com",
+      "loan": "Education Loan",
+      "rofi": "6%",
+      "cScore": "830",
+      "amount": 441666,
+      "repayment": 57,
+      "monthly": 9424,
+      "totalEmidone": "1",
+      "accNo": "9733581317"
+    }
+  ],
+  "emiPayment": [
+    {
+      "id": "7701",
+      "loan": {
+        "id": "a0da",
+        "name": "Vivek Dudhatra",
+        "mono": "8799323157",
+        "mail": "vivek@gmail.com",
+        "loan": "Car Loan",
+        "rofi": "8.5 %",
+        "cScore": "640",
+        "amount": 680000,
+        "repayment": 94,
+        "monthly": 15032,
+        "totalEmidone": "0",
+        "accNo": "6198140533"
+      },
+      "amount": 15032,
+      "EMInumber": "1",
+      "accNo": "6198140533"
+    },
+    {
+      "id": "1f60",
+      "loan": {
+        "id": "17e2",
+        "name": "Akhil Hapani",
+        "mono": "9876543210",
+        "mail": "akhil@gmail.com",
+        "loan": "Car Loan",
+        "rofi": "8.5 %",
+        "cScore": "785",
+        "amount": 970000,
+        "repayment": 108,
+        "monthly": 13392,
+        "totalEmidone": "0",
+        "accNo": "695028029"
+      },
+      "amount": 13392,
+      "EMInumber": "1",
+      "accNo": "695028029"
+    },
+    {
+      "id": "c856",
+      "loan": {
+        "id": "e63b",
+        "name": "Chirag Dudhatra",
+        "mono": "9687248426",
+        "mail": "vivek@gmail.com",
+        "loan": "Education Loan",
+        "rofi": "6%",
+        "cScore": "830",
+        "amount": 441666,
+        "repayment": 57,
+        "monthly": 9424,
+        "totalEmidone": 0,
+        "accNo": "9733581317"
+      },
+      "amount": 9424,
+      "EMInumber": "1",
+      "accNo": "9733581317"
+    }
+  ]
+}

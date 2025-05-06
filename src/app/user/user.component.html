@@ -1,0 +1,63 @@
+<header>
+    <p routerLink="/home">Home</p>
+    <p routerLink="/user">Users</p>
+    <!-- <p routerLink="/user">Recent Transaction</p> -->
+    <p routerLink="/transaction">Transaction</p>
+    <p routerLink="/loan">Loan</p>
+    <p routerLink="/approved-loan">Approved Loans</p>
+    <p (click)="logout()">Log Out</p>
+    <p class="amount">₹{{totalAmount}}</p>
+    
+
+</header>
+<hr>
+<div class="container">
+    <div class="input">
+        <input type="number" placeholder="Search with Acc. No." [(ngModel)]="searchText" name="searchNumber"
+            (keyup)="onChange()">
+    </div>
+    <div class="cards">
+        @for (item of userList2; track $index) {
+        <div class="card">
+            <div class="left">
+                <p>Name: <span><strong>{{item.fName}} {{item.lName}}</strong></span></p>
+                <p>Phone No.: <span><strong>{{item.phNumber}}</strong></span></p>
+                <p>Email: <span><strong>{{item.mail}}</strong></span></p>
+            </div>
+            <div class="right">
+                <p>Acc No.: <span><strong>{{item.accNo}}</strong></span></p>
+                <p>Amount.: <span><strong>₹{{item.amount}}</strong></span></p>
+                <button (click)="closeAcc(item)">Close Account</button>
+            </div>
+        </div>
+        }
+    </div>
+</div>
+
+@if(isShow){
+<div class="show">
+    <div class="box">
+        <p>Acc. No.: <span><strong>{{accNO}}</strong></span></p>
+        <p>Acc. Holder Name : <span><strong>{{accName}}</strong></span></p>
+        <hr class="hr">
+        @for (item of loanList; track $index) {
+        <p>Loan Name : <span><strong>{{item.loan}}</strong></span></p>
+        <p>Loan Amount : <span><strong>₹{{item.amount}}</strong></span></p>
+        <p>Total EMI : <span><strong>{{item.repayment}}</strong></span></p>
+        <p>Remaining EMI : <span><strong>{{item.repayment - item.totalEmidone}}</strong></span></p>
+        <p>EMI : <span><strong>₹{{item.monthly}}</strong></span></p>
+        <p>Remainig Loan Amount : <span><strong>₹{{item.remainigAmount}}</strong></span></p>
+            <hr class="hr">
+        }
+        <p>Remainig Amount : <span><strong>₹{{totalLoanAmount}} - ₹{{user.amount}} = ₹{{totalLoanAmount - user.amount}}</strong></span></p>
+        <div class="action">
+            <button (click)="close2(user)">
+                Close Account
+            </button>
+            <button (click)="back()">
+                Back
+            </button>
+        </div>
+    </div>
+</div>
+}

@@ -1,0 +1,36 @@
+<header>
+    <p routerLink="/home">Home</p>
+    <p routerLink="/user">Users</p>
+    <!-- <p routerLink="/user">Recent Transaction</p> -->
+    <p routerLink="/transaction">Transaction</p>
+    <p routerLink="/loan">Loan</p>
+    <p routerLink="/approved-loan">Approved Loans</p>
+    <p (click)="logout()">Log Out</p>
+</header>
+<hr>
+
+<div class="container">
+    <div class="input"> <input type="number" placeholder="Search with Acc. No." [(ngModel)]="searchText"
+            name="searchNumber" (keyup)="onChange()"></div>
+    <div class="cards">
+        @for (item of appLoanList; track $index) {
+            <div class="card">
+                <div class="left">
+                    <p>Loan Id : <span><strong>{{item.id}}</strong></span></p>
+                    <p>Acc. Holder : <span><strong>{{item.name}}</strong></span></p>
+                    <p>Acc. no.: <span><strong>{{item.accNo}}</strong></span></p>
+                    <p>Loan: <span><strong>{{item.loan}}</strong></span></p>
+                    <p>Amount: <span><strong>₹{{item.amount}}</strong></span></p>
+                </div>
+                <div class="right">
+                    <p>Rate of Interest: <span><strong>{{item.rofi}}</strong></span></p>
+                    <p>Credit Score: <span><strong>{{item.cScore}}</strong></span></p>
+                    <p>EMI : <span><strong>₹{{item.monthly}}</strong></span></p>
+                    <p>Total EMI : <span><strong>{{item.repayment}}</strong></span></p>
+                    <p>EMI Paid : <span><strong>{{item.totalEmidone}}</strong></span></p>
+                </div>
+            </div>
+            }
+    </div>
+
+</div>

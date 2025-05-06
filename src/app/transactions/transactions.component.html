@@ -1,0 +1,48 @@
+<header>
+    <p routerLink="/home">Home</p>
+    <p routerLink="/user">Users</p>
+    <!-- <p routerLink="/user">Recent Transaction</p> -->
+    <p routerLink="/transaction">Transaction</p>
+    <p routerLink="/loan">Loan</p>
+    <p routerLink="/approved-loan">Approved Loans</p>
+    <p (click)="logout()">Log Out</p>
+</header>
+<hr>
+
+<div class="container">
+    <div class="input">
+        <fa-icon [icon]="Up" class="icons"></fa-icon>
+        <h2 (click)="reload()">₹{{income}}</h2>
+        <input type="number" placeholder="Search with Acc. No." [(ngModel)]="searchText" name="searchNumber"
+            (keyup)="onChange()">
+        <select name="searchText2" [(ngModel)]="searchText2" id="" (change)="onChange2()">
+            <option value="" selected disabled hidden>-- Select By Date(Past 5 days only) --</option>
+            <option value="2025-03-11">11-03-2025</option>
+            <option value="2025-03-10">10-03-2025</option>
+            <option value="2025-03-08">08-03-2025</option>
+            <option value="2025-03-07">07-03-2025</option>
+            <option value="2025-03-06">06-03-2025</option>
+        </select>
+        <h2 (click)="reload()">₹{{outcome}}</h2>
+        <fa-icon [icon]="Down" class="icons"></fa-icon>
+    </div>
+    <div class="cards">
+        @for (item of tranList2; track $index) {
+        <div class="card">
+            <div class="left">
+                <p>Transaction Id : <span><strong>{{item.id}}</strong></span></p>
+                <p>Acc. no.: <span><strong>{{item.accNo}}</strong></span></p>
+                <p>Acc. Holder : <span><strong>{{item.name}}</strong></span></p>
+                <p>Amount: <span><strong>₹{{item.amount}}</strong></span></p>
+                <p>Transaction: <span><strong>{{item.transaction}}</strong></span></p>
+            </div>
+            <div class="right">
+                <p>Type: <span><strong>{{item.type}}</strong></span></p>
+                <p>Date .: <span><strong>{{item.date | date : 'dd-MM-yyyy'}}</strong></span></p>
+                <p>Time : <span><strong>{{item.date | date : 'HH:mm'}}</strong></span></p>
+            </div>
+        </div>
+        }
+    </div>
+
+</div>

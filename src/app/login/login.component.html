@@ -1,0 +1,9 @@
+<div class="container">
+    <h1>Login</h1>
+    <form action="">
+        <input type="text" placeholder="Enter Email" name="email" [(ngModel)]="email" autocomplete="off">
+        <input type="password" placeholder="Enter Password" name="password" [(ngModel)]="password" autocomplete="off">
+        <input type="password" placeholder="Enter Your OTP" name="otp" [(ngModel)]="otp" autocomplete="off">
+        <button (click)="login(email, password, otp)">Login</button>
+    </form>
+</div>
