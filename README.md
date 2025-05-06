@@ -2,6 +2,9 @@
 
 A web-based admin panel built with **Angular 19** for internal bank staff to manage user accounts, perform transactions, and handle loan processing. It uses **JSON Server** as a mock backend.
 
+To start exploring app use **Email : vivek@gmail.com**, **Password : 1313** and **OTP : 1616**.
+And also every time you made a transaction it will ask for pin use **1616** to procced further.
+
 ---
 
 ## 🚀 Features
